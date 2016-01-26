@@ -14,5 +14,12 @@ block content
         tr
           th Contacts (Doubleclick for additional info)
       tbody#toAppend
+        each datum in data
+          tr
+            td
+              button.nextpage= datum.firstname
+            td= datum.number
+            td= datum.mail
+
   script(src='https://code.jquery.com/jquery-2.2.0.min.js')
-  script(src='public/javascripts/main.js')
+  script(src='javascripts/main.js')
