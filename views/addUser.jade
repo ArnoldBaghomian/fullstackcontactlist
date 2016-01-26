@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+    form
+      | First name:
+      br
+      input(type='text', name='firstname')
+      br
+      | Phone Number:
+      br
+      input(type='text', name='number')
+      br
+      | Email:
+      br
+      input(type='text', name='email')
+      br
+
+
+      button(class="btn", data-action="bea", id='postnow').
+        Add UserInfo
+      a.btn.btn-default.btn-danger(href='/') Cancel
+
+
+
+block scripts
+  script(src='https://code.jquery.com/jquery-2.2.0.min.js')
+  script(src='javascripts/main.js')
